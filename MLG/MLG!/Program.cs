@@ -87,7 +87,7 @@ namespace MLG
 
         private static void Obj_AI_Base_OnDamage(AttackableUnit sender, AttackableUnitDamageEventArgs args)
         {
-            /*
+            
             var caster = sender as AIHeroClient;
             var target = args.Target as AIHeroClient;
 
@@ -98,7 +98,7 @@ namespace MLG
             HitMarkerSound.Play();
   
             Core.DelayAction(() => CanDrawHitMarker = false, 200);
-            */
+            
         }
 
         private static void Game_OnNotify(GameNotifyEventArgs args)
