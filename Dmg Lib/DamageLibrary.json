@@ -380,7 +380,7 @@
             {
               "DamageType": "Magical",
               "DamagePercentages": [ 0.09, 0.1, 0.11, 0.12, 0.13 ],
-              "ScalePer100Ap": 0.03, // Maybe need a fix
+              "ScalePer100Ap": 0.03,
               "ScalingTarget": "Target",
               "ScalingType": "MaxHealth"
             }
@@ -777,7 +777,7 @@
           "BonusDamages": [
             {
               "DamageType": "Magical",
-              "DamagePercentages": [ 0.25, 0.30, 0.35 ] ,//+ 0.4 /100 * Source.AbilityPoints
+              "DamagePercentages": [ 0.25, 0.30, 0.35 ] ,
               "ScalingTarget": "Target",
               "ScalingType": "MaxHealth"
             }
@@ -1098,7 +1098,7 @@
         "Stage": "Default",
         "SpellData": {
           "DamageType": "Magical",
-          "Damages": [ 60, 77, 95, 112, 130 ], // + 0.01 * 3.875 units traveled
+          "Damages": [ 60, 77, 95, 112, 130 ],
           "BonusDamages": [
             {
               "DamageType": "Magical",
@@ -1110,10 +1110,10 @@
         }
       },
       {
-        "Stage": "SecondForm", /* When in second form this damage will increase 1.5% for every 1% of the target`s missing health*/
-        "SpellData": {         /* Math = + 0.015 * Target.MissingHealthPercent */
+        "Stage": "SecondForm", 
+        "SpellData": {         
           "DamageType": "Magical",
-          "Damages": [ 4, 20, 50, 90 ], //Scales with R level
+          "Damages": [ 4, 20, 50, 90 ], 
           "BonusDamages": [
             {
               "DamageType": "Magical",
@@ -1131,10 +1131,10 @@
         }
       },
       {
-        "Stage": "SecondForm and TargetHasBuff",/* When in second form this damage will increase 1.5% for every 1% of the target`s missing health*/
-        "SpellData": {                          /* Math = + 0.015 * Target.MissingHealthPercent */
+        "Stage": "SecondForm and TargetHasBuff",
+        "SpellData": {                          
           "DamageType": "Magical",
-          "Damages": [ 5.3, 26.7, 66.7, 120 ],//Scales with R level
+          "Damages": [ 5.3, 26.7, 66.7, 120 ],
           "BonusDamages": [
             {
               "DamageType": "Magical",
@@ -1173,7 +1173,7 @@
         "Stage": "SecondForm",
         "SpellData": {
           "DamageType": "Magical",
-          "Damages": [ 50, 100, 150, 200 ], //Scales with R level
+          "Damages": [ 50, 100, 150, 200 ], 
           "BonusDamages": [
             {
               "DamageType": "Magical",
@@ -1190,7 +1190,7 @@
         "Stage": "SecondForm",
           "SpellData": {
           "DamageType": "Magical",
-          "Damages": [ 70, 130, 190, 250 ],//Scales with R level
+          "Damages": [ 70, 130, 190, 250 ],
           "BonusDamages": [
             {
               "DamageType": "Magical",
@@ -1733,7 +1733,7 @@
         }
       }
     ],
-    "E": [ /*This damage is increased by every 1% in the fury bar, and if the player has 100% fury it will deal true damage*/
+    "E": [ 
       {
         "Stage": "Empowered",
         "SpellData": {
@@ -1924,9 +1924,9 @@
         }
       }
     ],
-    "R": [ /*The Damage will be increased by 2.67% for every 1% of target missing health, for a maximum 200% at 75% of target`s health*/
-      {    /*Math = 0.0267 * Target.MissingHealthPercent. if (Target.MissingHealthPercent >= 75%) { R.MinimumDamge * 2} */
-        "Stage": "Default",//Fix Stage
+    "R": [ 
+      {    
+        "Stage": "Default",
         "SpellData": {
           "DamageType": "Physical",
           "Damages": [ 80, 120, 160 ],
@@ -2808,7 +2808,7 @@
     ],
     "R": [
       {
-        "Stage": "Default", /*Minimum Damage*/
+        "Stage": "Default", 
         "SpellData": {
           "DamageType": "Magical",
           "Damages": [ 270, 405, 540 ],
@@ -2821,23 +2821,7 @@
             }
           ]
         }
-      },
-      {
-        "Stage": "Per Sphere", /*Per sphere, if (Spheres > 3){Rdamage = SphereDamage * speheres}*/
-        "SpellData": {
-          "DamageType": "Magical",
-          "Damages": [ 90, 135, 180 ],
-          "BonusDamages": [
-            {
-              "DamageType": "Magical",
-              "DamagePercentages": [ 0.2, 0.2, 0.2 ],
-              "ScalingTarget": "Source",
-              "ScalingType": "AbilityPoints"
-            }
-          ]
-        }
       }
-    ]
   },
   "Tahm Kench": {
     "Q": [
@@ -2866,7 +2850,7 @@
           "BonusDamages": [
             {
               "DamageType": "Magical",
-              "DamagePercentages": [ 0.2, 0.23, 0.26, 0.29, 0.32 ],/* + 0.02 * Source.AbilityPoints*/
+              "DamagePercentages": [ 0.2, 0.23, 0.26, 0.29, 0.32 ],
               "ScalingTarget": "Target",
               "ScalingType": "MaxHealth"
             }
@@ -3235,7 +3219,7 @@
           {
             "DamageType": "Magical",
             "DamagePercentages": [ 0.10, 0.1375, 0.175 ],
-            "ScalePer100Ap": 0.01, /* + 0.01 /100 * Source.AbilityPoints*/
+            "ScalePer100Ap": 0.01, 
             "ScalingTarget": "Target",
             "ScalingType": "MaxHealth"
           }
@@ -3251,7 +3235,7 @@
             {
               "DamageType": "Magical",
               "DamagePercentages": [ 0.025, 0.034, 0.044 ],
-              "ScalePer100Ap": 0.003,/* + 0.003 /100 * Source.AbilityPoints*/
+              "ScalePer100Ap": 0.003,
               "ScalingTarget": "Target",
               "ScalingType": "MaxHealth"
             }
