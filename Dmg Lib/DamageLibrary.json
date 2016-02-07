@@ -1274,7 +1274,7 @@
         "Stage": "Default",
         "SpellData": {
           "DamageType": "Magical",
-          "Damages": [ 85, 130, 175, 225, 275 ],
+          "Damages": [ 80, 120, 160, 200, 240 ],
           "BonusDamages": [
             {
               "DamageType": "Magical",
