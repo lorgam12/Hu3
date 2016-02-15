@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C957B4DD-934B-4F17-A5BC-7599585A97D3}</ProjectGuid>
+    <ProjectGuid>{52904EB9-0679-4C06-95B1-514484137B34}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mario_sWukong</RootNamespace>
-    <AssemblyName>Mario`s Wukong</AssemblyName>
+    <RootNamespace>PathDebug</RootNamespace>
+    <AssemblyName>PathDebug</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -59,16 +59,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EventsManager.cs" />
-    <Compile Include="Helpers.cs" />
-    <Compile Include="Logics\FarmLogics.cs" />
-    <Compile Include="Logics\ComboLogics.cs" />
-    <Compile Include="MenuSettings.cs" />
-    <Compile Include="ModeManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Spells.cs" />
-    <Compile Include="Ultilities\DamageIndicator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
