@@ -29,11 +29,42 @@ namespace Tutorial_EB
             E = new Spell.Targeted(SpellSlot.E, 700);
             R = new Spell.Active(SpellSlot.R, 500);
 
+            Orbwalker.OnPostAttack += Orbwalker_OnPostAttack;
+
             Game.OnTick += Game_OnTick;
+
+            Obj_AI_Base.OnBasicAttack += Obj_AI_Base_OnBasicAttack;
+        }
+
+        private static void Obj_AI_Base_OnBasicAttack(Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)
+        {
+            if (sender.IsEnemy && args.Target.IsMe)
+            {
+                W.Cast();
+            }
+        }
+
+        private static void Orbwalker_OnPostAttack(AttackableUnit target, EventArgs args)
+        {
+            var targetQ = TargetSelector.GetTarget(Q.Range, DamageType.Physical);
+            if(targetQ == null)return;
+            if (Orbwalker.ActiveModesFlags.HasFlag(Orbwalker.ActiveModes.Combo))
+            {
+                if (Q.IsReady() && targetQ.IsValidTarget(Q.Range))
+                {
+                    Q.Cast();
+                }
+            }
         }
 
         private static void Game_OnTick(EventArgs args)
         {
+            var ally = EntityManager.Heroes.Allies.FirstOrDefault(a => !a.IsMe && a.HealthPercent <= 20);
+            if(ally == null)return;
+            if (W.IsReady() && ally.IsInRange(Player.Instance, W.Range))
+            {
+                W.Cast(ally);
+            }
             if (Orbwalker.ActiveModesFlags.HasFlag(Orbwalker.ActiveModes.Combo))
             {
                 var target = TargetSelector.GetTarget(E.Range, DamageType.Magical);
@@ -46,6 +77,11 @@ namespace Tutorial_EB
                 if (W.IsReady() && target.IsInRange(Player.Instance, W.Range))
                 {
                     W.Cast(Player.Instance);
+                }
+
+                if (R.IsReady() && target.IsValidTarget(R.Range))
+                {
+                    R.Cast();
                 }
             }
 
