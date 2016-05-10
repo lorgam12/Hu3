@@ -18,6 +18,11 @@ namespace Mario_s_Activator
             {
                 OwnedItems.Add(alreadyOwned);
             }
+
+            foreach (var i in OwnedItems)
+            {
+                Chat.Print(i.Id);
+            }
         }
 
         private static void Shop_OnBuyItem(AIHeroClient sender, ShopActionEventArgs args)

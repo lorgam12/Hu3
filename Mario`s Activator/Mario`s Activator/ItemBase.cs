@@ -16,7 +16,6 @@ namespace Mario_s_Activator
 
         public void OnTick()
         {
-            Chat.Print("1");
             if (!OwnedItems.Contains(thisItem)) return;
             Chat.Print("2");
             if (!Initialized)
