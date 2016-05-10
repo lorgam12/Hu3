@@ -14,9 +14,9 @@ namespace Mario_s_Activator
             Shop.OnBuyItem += Shop_OnBuyItem;
             Shop.OnSellItem += Shop_OnSellItem;
 
-            foreach (var i in Player.Spells)
+            foreach (var a in Player.Instance.InventoryItems)
             {
-                Chat.Print(i.Name);
+                Chat.Print(a.Id);
             }
         }
 
