@@ -16,19 +16,21 @@ namespace Mario_s_Activator
 
         public void OnTick()
         {
+            Chat.Print("1");
             if (!OwnedItems.Contains(thisItem)) return;
-
+            Chat.Print("2");
             if (!Initialized)
             {
+                Chat.Print("3");
                 InitializeItem();
                 Initialized = true;
             }
-
+            Chat.Print("4");
             thisTarget = Misc.Extensions.GetBestItemTarget(thisItem);
             var menuValue = MyMenu.OffensiveMenu.GetCheckBoxValue("check" + (int) thisItem.Id);
-
+            Chat.Print("5");
             if (!thisItem.IsReady() || !menuValue || thisTarget == null) return;
-
+            Chat.Print("6");
             Execute();
         }
     }
