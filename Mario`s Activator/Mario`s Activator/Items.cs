@@ -14,9 +14,9 @@ namespace Mario_s_Activator
             Shop.OnBuyItem += Shop_OnBuyItem;
             Shop.OnSellItem += Shop_OnSellItem;
 
-            foreach (var a in Player.Instance.InventoryItems)
+            foreach (var alreadyOwned in Player.Instance.InventoryItems.Where(i => (int)i.Id != 2001).Select(a => new Item(a.Id, GetItemRange((int)a.Id))))
             {
-                Chat.Print(a.Id);
+                OwnedItems.Add(alreadyOwned);
             }
         }
 
