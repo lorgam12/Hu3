@@ -13,11 +13,17 @@ namespace Mario_s_Activator
         {
             Shop.OnBuyItem += Shop_OnBuyItem;
             Shop.OnSellItem += Shop_OnSellItem;
+
+            foreach (var i in Player.Spells)
+            {
+                Chat.Print(i.Name);
+            }
         }
 
         private static void Shop_OnBuyItem(AIHeroClient sender, ShopActionEventArgs args)
         {
             if (!sender.IsMe) return;
+            Chat.Print("Item " + args.Id + "Bought");
             var boughtItem = new Item(args.Id, GetItemRange(args.Id));
             OwnedItems.Add(boughtItem);
         }
@@ -25,6 +31,7 @@ namespace Mario_s_Activator
         private static void Shop_OnSellItem(AIHeroClient sender, ShopActionEventArgs args)
         {
             if (!sender.IsMe) return;
+            Chat.Print("Item " + args.Id + "Sold");
             var boughtItem = new Item(args.Id, GetItemRange(args.Id));
             OwnedItems.Remove(boughtItem);
         }

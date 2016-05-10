@@ -25,6 +25,7 @@ namespace Mario_s_Activator
             InitializeMenu();
             //Drawings.InitializeDrawings();
             Cleanser.Init();
+            Items.InitializeItemDetection();
         }
         /*
         private static int TickCount;
