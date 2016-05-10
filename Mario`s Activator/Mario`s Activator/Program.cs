@@ -93,7 +93,7 @@ namespace Mario_s_Activator
             {
                 if (!ActivatorLoaded)
                 {
-                    //Activator.Init();
+                    Activator.Init();
                     ActivatorLoaded = true;
                 }
                 if (ActivatorLoaded)

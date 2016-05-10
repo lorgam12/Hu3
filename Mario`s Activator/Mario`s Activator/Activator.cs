@@ -13,20 +13,20 @@ namespace Mario_s_Activator
 {
     internal class Activator
     {
-        /*
+        
         public static bool CanPost;
 
         public static void Init()
         {
-            InitializeSummonerSpells();
-            Game.OnTick += Game_OnTick;
-            Orbwalker.OnPostAttack += Orbwalker_OnPostAttack;
-            Game.OnUpdate += Game_OnUpdate;
+            //InitializeSummonerSpells();
+            //Game.OnTick += Game_OnTick;
+            //Orbwalker.OnPostAttack += Orbwalker_OnPostAttack;
+            //Game.OnUpdate += Game_OnUpdate;
             InitializeMenu();
-            Drawings.InitializeDrawings();
+            //Drawings.InitializeDrawings();
             Cleanser.Init();
         }
-
+        /*
         private static int TickCount;
         private static void Game_OnTick(EventArgs args)
         {
