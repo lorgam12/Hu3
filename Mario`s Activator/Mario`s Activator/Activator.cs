@@ -19,7 +19,7 @@ namespace Mario_s_Activator
         public static void Init()
         {
             //InitializeSummonerSpells();
-            //Game.OnTick += Game_OnTick;
+            Game.OnTick += Game_OnTick;
             //Orbwalker.OnPostAttack += Orbwalker_OnPostAttack;
             //Game.OnUpdate += Game_OnUpdate;
             InitializeMenu();
@@ -27,12 +27,13 @@ namespace Mario_s_Activator
             Cleanser.Init();
             Items.InitializeItemDetection();
         }
-        /*
+        
         private static int TickCount;
         private static void Game_OnTick(EventArgs args)
         {
+            ItemsTick.TickManager.Initialize();
             if(TickCount > Environment.TickCount) return;
-
+            /*
             OffensiveOnTick();
             ConsumablesOnTick();
             IgniteOnTick();
@@ -46,10 +47,10 @@ namespace Mario_s_Activator
                     Chat.Print(a.ChampionName + " On danger");
                 }
             }
-
+            */
             TickCount = Environment.TickCount + SettingsMenu.GetSliderValue("tickLimiter");
         }
-
+        /*
         private static void Game_OnUpdate(EventArgs args)
         {
             DefensiveOnTick();
