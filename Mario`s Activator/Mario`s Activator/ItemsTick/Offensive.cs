@@ -10,8 +10,8 @@ namespace Mario_s_Activator.ItemsTick
 
         public static void OnTick()
         {
-            bilgewaterCutlass.Execute();
-            bladeOfTheRuinedKing.Execute();
+            bilgewaterCutlass.OnTick();
+            bladeOfTheRuinedKing.OnTick();
         }
     }
 
